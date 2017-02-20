@@ -21505,10 +21505,7 @@
 		function Bin(props) {
 			_classCallCheck(this, Bin);
 	
-			var _this = _possibleConstructorReturn(this, (Bin.__proto__ || Object.getPrototypeOf(Bin)).call(this, props));
-	
-			console.log('constructor running again');
-			return _this;
+			return _possibleConstructorReturn(this, (Bin.__proto__ || Object.getPrototypeOf(Bin)).call(this, props));
 		}
 	
 		_createClass(Bin, [{
@@ -21622,11 +21619,37 @@
 		}, {
 			key: 'render',
 			value: function render() {
-				console.log('bin render');
 				return _react2.default.createElement(
 					'div',
-					{ className: 'col-xs-6' },
-					_react2.default.createElement('svg', { id: this.props.uid, className: 'big' })
+					null,
+					_react2.default.createElement(
+						'div',
+						{ className: 'col-xs-6' },
+						_react2.default.createElement('svg', { id: this.props.uid, className: 'big' })
+					),
+					_react2.default.createElement(
+						'p',
+						null,
+						' Occupancy: ',
+						this.props.bin.occupiedArea,
+						' '
+					),
+					_react2.default.createElement(
+						'ul',
+						{ className: 'col-xs-5' },
+						this.props.bin.usedRectangles.map(function (usedRect, i) {
+							return _react2.default.createElement(
+								'li',
+								null,
+								'Piece ',
+								i + 1,
+								' : ',
+								usedRect.height,
+								' x ',
+								usedRect.width
+							);
+						})
+					)
 				);
 			}
 		}]);

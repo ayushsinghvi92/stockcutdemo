@@ -3,7 +3,6 @@ export default class Bin extends React.Component {
 
 	constructor(props) {
 		super(props);
-		console.log('constructor running again')
 	}
 
 	findCenter (rectangle) {
@@ -94,11 +93,16 @@ export default class Bin extends React.Component {
 		two.update();
 	}	
 	render () { 
-		console.log('bin render')
 		return (
+		<div>
 			<div className='col-xs-6'>
 				<svg id = { this.props.uid } className='big'></svg>
 			</div>
+			<p> Occupancy: {this.props.bin.occupiedArea} </p>
+			<ul className='col-xs-5'> 
+				{ this.props.bin.usedRectangles.map ((usedRect,i) => <li>Piece {i + 1} : {usedRect.height} x {usedRect.width}</li>)}
+			</ul>
+		</div>
 		)		
 	}
 }

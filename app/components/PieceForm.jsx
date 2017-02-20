@@ -23,18 +23,18 @@ const PieceForm = (props) => {
 
 	return (
 		<div>
-		<FormGroup className='col-xs-4' controlId="height">
-			<ControlLabel>Piece Height</ControlLabel>
-			<FormControl type="number" placeholder="3000" onChange = { handleHeightChange }/>
-		</FormGroup>
-		<FormGroup className='col-xs-4'controlId="width">
-			<ControlLabel>Piece Width</ControlLabel>
-			<FormControl type="number" placeholder="1800" onChange = { handleWidthChange }/>
-		</FormGroup>
-		<FormGroup className='col-xs-4' controlId='quantity'>
-			<ControlLabel>Quantity</ControlLabel>
-			<FormControl type='number' onChange = { handleQuantityChange }/>
-		</FormGroup>
+			<FormGroup className='col-xs-4' controlId="height">
+				<ControlLabel>Piece Height</ControlLabel>
+				<FormControl type="number" placeholder="3000" onChange = { handleHeightChange }/>
+			</FormGroup>
+			<FormGroup className='col-xs-4'controlId="width">
+				<ControlLabel>Piece Width</ControlLabel>
+				<FormControl type="number" placeholder="1800" onChange = { handleWidthChange }/>
+			</FormGroup>
+			<FormGroup className='col-xs-4' controlId='quantity'>
+				<ControlLabel>Quantity</ControlLabel>
+				<FormControl type='number' onChange = { handleQuantityChange }/>
+			</FormGroup>
 		</div>
 	)
 }

@@ -10,7 +10,9 @@ console.log('this is being called')
 	while(validPieces.length) {
 		try {
 			currentBin.insertPieces (validPieces);
+			currentBin.occupiedArea = currentBin.occupancy();
 		} catch (e) {
+			currentBin.occupiedArea = currentBin.occupancy();
 			let newBin = new Bin (binSize.height, binSize.width);
 			bins.push(newBin);
 		}
