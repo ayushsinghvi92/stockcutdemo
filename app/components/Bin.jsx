@@ -94,12 +94,12 @@ export default class Bin extends React.Component {
 	}	
 	render () { 
 		return (
-		<div>
+		<div className='col-xs-12'>
 			<div className='col-xs-6'>
 				<svg id = { this.props.uid } className='big'></svg>
 			</div>
 			<p> Occupancy: {this.props.bin.occupiedArea} </p>
-			<ul className='col-xs-5'> 
+			<ul className='col-xs-6'> 
 				{ this.props.bin.usedRectangles.map ((usedRect,i) => <li>Piece {i + 1} : {usedRect.height} x {usedRect.width}</li>)}
 			</ul>
 		</div>

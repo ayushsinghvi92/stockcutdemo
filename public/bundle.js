@@ -21621,7 +21621,7 @@
 			value: function render() {
 				return _react2.default.createElement(
 					'div',
-					null,
+					{ className: 'col-xs-12' },
 					_react2.default.createElement(
 						'div',
 						{ className: 'col-xs-6' },
@@ -21636,7 +21636,7 @@
 					),
 					_react2.default.createElement(
 						'ul',
-						{ className: 'col-xs-5' },
+						{ className: 'col-xs-6' },
 						this.props.bin.usedRectangles.map(function (usedRect, i) {
 							return _react2.default.createElement(
 								'li',
@@ -41315,7 +41315,7 @@
 			null,
 			_react2.default.createElement(
 				_reactBootstrap.FormGroup,
-				{ className: 'col-xs-4', controlId: 'height' },
+				{ className: 'col-xs-6', controlId: 'height' },
 				_react2.default.createElement(
 					_reactBootstrap.ControlLabel,
 					null,
@@ -41325,27 +41325,23 @@
 			),
 			_react2.default.createElement(
 				_reactBootstrap.FormGroup,
-				{ className: 'col-xs-4', controlId: 'width' },
+				{ className: 'col-xs-6', controlId: 'width' },
 				_react2.default.createElement(
 					_reactBootstrap.ControlLabel,
 					null,
 					'Piece Width'
 				),
 				_react2.default.createElement(_reactBootstrap.FormControl, { type: 'number', placeholder: '1800', onChange: handleWidthChange })
-			),
-			_react2.default.createElement(
-				_reactBootstrap.FormGroup,
-				{ className: 'col-xs-4', controlId: 'quantity' },
-				_react2.default.createElement(
-					_reactBootstrap.ControlLabel,
-					null,
-					'Quantity'
-				),
-				_react2.default.createElement(_reactBootstrap.FormControl, { type: 'number', onChange: handleQuantityChange })
 			)
 		);
 	};
 	
+	/*			
+	<FormGroup className='col-xs-4' controlId='quantity'>
+		<ControlLabel>Quantity</ControlLabel>
+		<FormControl type='number' onChange = { handleQuantityChange }/>
+	</FormGroup>
+	*/
 	exports.default = PieceForm;
 
 /***/ },
